@@ -12,7 +12,7 @@ $(".time-row").each(function() {
 
     if (currentHour == timeRow) {
         $(this).addClass("present");
-        $(this).children(".description").addClass("yellow-text");
+        $(this).children(".description");
     } else if (currentHour < timeRow) {
         $(this).removeClass("present");
         $(this).addClass("future");
@@ -22,17 +22,21 @@ $(".time-row").each(function() {
     }
 });
 
+//add an event listener to savebtn so that when clicked it will get saved to local storage
+$(".saveBtn").click(function(event) {
+    event.preventDefault();
+    let task = $(this).siblings(".time-block").val();
+    let timeOfTask = $(this).parent().attr("id").split("-")[1];
+    localStorage.setItem(timeOfTask, task);
 
-
-// WHEN I click into a timeblock
-// THEN I can enter an event
-
-
-
-// WHEN I click the save button for that timeblock
-// THEN the text for that event is saved in local storage
-
-
-
-// WHEN I refresh the page
-// THEN the saved events persist
+});
+// get items from local storage so that when the page gets refreshed they still appear
+$("#hour-09 .time-block").val(localStorage.getItem("9"));
+$("#hour-10 .time-block").val(localStorage.getItem("10"));
+$("#hour-11 .time-block").val(localStorage.getItem("11"));
+$("#hour-12 .time-block").val(localStorage.getItem("12"));
+$("#hour-13 .time-block").val(localStorage.getItem("13"));
+$("#hour-14 .time-block").val(localStorage.getItem("14"));
+$("#hour-15 .time-block").val(localStorage.getItem("15"));
+$("#hour-16 .time-block").val(localStorage.getItem("16"));
+$("#hour-17 .time-block").val(localStorage.getItem("17"));
