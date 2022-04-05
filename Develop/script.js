@@ -28,8 +28,9 @@ $(".saveBtn").click(function(event) {
     let task = $(this).siblings(".time-block").val();
     let timeOfTask = $(this).parent().attr("id").split("-")[1];
     localStorage.setItem(timeOfTask, task);
-
 });
+
+
 // get items from local storage so that when the page gets refreshed they still appear
 $("#hour-09 .time-block").val(localStorage.getItem("9"));
 $("#hour-10 .time-block").val(localStorage.getItem("10"));
