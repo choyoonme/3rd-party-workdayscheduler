@@ -8,5 +8,5 @@ The index.html is equipped with bootstrap, moment.js, and jquery libraries.  Boo
 
 Link to application: https://choyoonme.github.io/3rd-party-workdayscheduler/
 
-![image of color coded workday calendar](Develop/workdayplanner.png)
+![image of color coded workday calendar](assets/workdayplanner.png)
 
