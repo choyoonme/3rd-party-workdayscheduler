@@ -32,6 +32,7 @@ $(".saveBtn").click(function(event) {
 
 
 // get items from local storage so that when the page gets refreshed they still appear
+//target ID and class
 $("#hour-09 .time-block").val(localStorage.getItem("9"));
 $("#hour-10 .time-block").val(localStorage.getItem("10"));
 $("#hour-11 .time-block").val(localStorage.getItem("11"));

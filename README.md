@@ -8,5 +8,5 @@ The index.html is equipped with bootstrap, moment.js, and jquery libraries.  Boo
 
 Link to application:
 
-![image of color coded workday calendar]()
+![image of color coded workday calendar](Develop/workdayplanner.png)
 
